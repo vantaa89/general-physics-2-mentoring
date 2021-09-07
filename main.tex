@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.4 (26/09/2018)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+\usepackage[utf8]{inputenc}
+\usepackage{kotex}
+\usepackage{setspace}
+\setstretch{1.2}
+
+
+\input{structure.tex} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+%\hypersetup{pdftitle={Title},pdfauthor={Author}} % Uncomment and fill out to include PDF metadata for the author and title of the book
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty} % Suppress headers and footers on the title page
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{title_page.pdf}};
+%\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering General Physics 2\\[15pt] % Book title
+%{\huge Mentoring}\\[20pt] % Subtitle
+%{\Large 18-089 이서준}}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	서문
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\thispagestyle{empty}
+\begin{center}
+\noindent\huge{\textbf서문}}
+\end{center}\\
+\vspace{30pt}
+\\
+우리 한국과학영재학교가 다른 학교와 다르게 가지는 차별점은 학생들이 학원에 크게 의존하지 않고 자기주도적으로 공부를 해나간다는 점일 것입니다. 그러나 우리 학교의 일반물리학 과목의 경우 1학년 때 배웠던 물리에 비해 창의적인 발상이나 스킬을 요구하는 등 급격하게 난이도가 올라가 어려움을 겪는 학생들이 많습니다. 또한 교과서에 나와 있는 문제들과 실제 시험에서 출제되는 문제들의 난이도 차이가 크기 때문에 공부할 자료가 많지 않고, 선생님에 따라서 가르치시는 스타일에 확연한 차이가 있어 공부하는 데 많은 어려움이 있습니다.  이에 일반물리학을 수강하는 학생들이 스스로 공부할 수 있는 자료가 필요하다는 생각에 멘토링을 시작하게 되었고, 이 자료를 만들게 되었습니다.\\
+이 멘토링 교재는 중간고사 범위로 정전기학과 정자기학, 그리고 회로이론의 3장, 기말고사 범위로 전자기파와 파동광학, 상대성 이론, 그리고 양자역학의 4장으로 구성되어 있습니다. 각 장에는 일반물리학2 수업을 진행하시는 두 분의 선생님께서 중점적으로 강조하신 부분을 모두 담으려고 최대한 노력하였습니다. 또한 교과서에 나와있지 않지만 헷갈릴 수 있거나 두 선생님의 수업에서 나왔던 내용을 담았습니다. 연습문제의 경우는 교과서(Bauer)와 그리피스 기초전자기학, 할리데이 일반물리학과 Irodov의 Problems in General Physics 등에서 직접 풀어보면서 어느 정도 난이도가 높고 풀어봐야 할 가치가 크다고 생각되는 것들을 골라 넣었습니다. 
+또, 여러 분의 선배님들께서 멘토링 아카이브에 남겨 주신 기출 문제를 각 단원에 나누어 수록하였습니다. 만약 자료에 틀린 부분이 있다고 생각된다면 언제든지 정말 부담없이 \texttt{leeseojune89@gmail.com}으로 연락해 주시면 좋겠습니다.\\
+마지막으로 소중한 기회를 제공해준 과학봉사부에 감사의 말씀을 드리고 싶습니다. 또, 제 멘토링을 수강한 9명의 학생들을 포함해서 이번 학기에 일반물리학2를 수강하는 모든 학생들이 만족스러운 성적을 거두기를 바라겠습니다!
+\vfill~
+\hfill~ 2020년 7월, 18-089 이서준 드림
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1(1).pdf} % Table of contents heading image
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right side of the book
+
+\pagestyle{fancy} % Enable headers and footers again
+
+\input{midterm.tex}
+\input{final.tex}
+
+\end{document}
